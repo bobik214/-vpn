@@ -1,0 +1,15 @@
+{
+    "log": {"loglevel": "warning"},
+    "dns": {
+        "servers": ["1.1.1.1", "8.8.8.8"],
+        "queryStrategy": "UseIPv4"
+    },
+    "inbounds": [
+        {"listen": "127.0.0.1", "port": 10808, "protocol": "socks", "settings": {"auth": "noauth", "udp": true}, "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}}
+    ],
+    "outbounds": [
+        {"protocol": "socks", "settings": {"servers": [{"address": "161.0.14.107", "port": 8000, "users": [{"user": "dy7MN7", "pass": "zuXFgs"}]}]}, "streamSettings": {"network": "tcp"}, "tag": "proxy"},
+        {"protocol": "freedom", "tag": "direct"}
+    ],
+    "routing": {"rules": [{"outboundTag": "direct", "ip": ["geoip:private", "geoip:ru"]}, {"outboundTag": "proxy", "network": "tcp,udp"}]}
+}
