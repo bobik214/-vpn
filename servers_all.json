@@ -1,0 +1,191 @@
+{
+    "description": "ZombieVPN",
+    "dns": {
+        "hosts": {
+            "cloudflare-dns.com": "1.1.1.1",
+            "dns.google": "8.8.8.8"
+        },
+        "queryStrategy": "UseIPv4",
+        "servers": [
+            "8.8.8.8",
+            {
+                "address": "8.8.8.8",
+                "domains": [
+                    "geosite:twitch-ads",
+                    "geosite:youtube",
+                    "domain:googlevideo.com",
+                    "domain:youtube.com",
+                    "domain:ytimg.com"
+                ],
+                "port": 53
+            },
+            {
+                "address": "77.88.8.8",
+                "domains": [
+                    "geosite:private",
+                    "geosite:category-ru"
+                ],
+                "port": 53
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {"auth": "noauth", "udp": true},
+            "sniffing": {"enabled": true, "destOverride": ["http", "tls", "quic"], "routeOnly": true},
+            "tag": "socks"
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 10809,
+            "protocol": "http",
+            "settings": {"userLevel": 8},
+            "sniffing": {"enabled": true, "destOverride": ["http", "tls", "quic"], "routeOnly": true},
+            "tag": "http"
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 11111,
+            "protocol": "dokodemo-door",
+            "settings": {"address": "127.0.0.1"},
+            "tag": "metrics_in"
+        }
+    ],
+    "log": {"loglevel": "warning"},
+    "metrics": {"tag": "metrics_out"},
+    "outbounds": [
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "161.0.14.107", "port": 8000, "users": [{"level": 8, "pass": "zuXFgs", "user": "dy7MN7"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-finland"
+        },
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "85.195.81.155", "port": 12288, "users": [{"level": 8, "pass": "p8T83E", "user": "vqc8Xu"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-germany"
+        },
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "45.153.20.216", "port": 10239, "users": [{"level": 8, "pass": "KCTUKb", "user": "FB1YmK"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-uk"
+        },
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "217.69.6.173", "port": 10709, "users": [{"level": 8, "pass": "CcToZP", "user": "qQAgQ2"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-france"
+        },
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "45.91.209.149", "port": 10737, "users": [{"level": 8, "pass": "nAuGax", "user": "UnYfuL"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-netherlands1"
+        },
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "45.91.209.149", "port": 10736, "users": [{"level": 8, "pass": "nAuGax", "user": "UnYfuL"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-netherlands2"
+        },
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "45.91.209.149", "port": 10735, "users": [{"level": 8, "pass": "nAuGax", "user": "UnYfuL"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-netherlands3"
+        },
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "217.29.62.212", "port": 12112, "users": [{"level": 8, "pass": "6BW0at", "user": "x4d0W7"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-moscow1"
+        },
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "217.29.53.108", "port": 13633, "users": [{"level": 8, "pass": "KRH2sF", "user": "UsbDcf"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-moscow2"
+        },
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "217.29.62.212", "port": 12111, "users": [{"level": 8, "pass": "6BW0at", "user": "x4d0W7"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-moscow3"
+        },
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "217.29.62.212", "port": 12110, "users": [{"level": 8, "pass": "6BW0at", "user": "x4d0W7"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-moscow4"
+        },
+        {
+            "mux": {"concurrency": 8, "enabled": true, "xudpConcurrency": 8, "xudpProxyUDP443": "xudp"},
+            "protocol": "socks",
+            "settings": {
+                "servers": [{"address": "217.29.62.212", "port": 12109, "users": [{"level": 8, "pass": "6BW0at", "user": "x4d0W7"}]}]
+            },
+            "streamSettings": {"network": "tcp", "security": "", "sockopt": {"dialerProxy": "fragment", "TcpNoDelay": true}},
+            "tag": "proxy-moscow5"
+        },
+        {"protocol": "freedom", "settings": {"domainStrategy": "UseIP"}, "tag": "direct"},
+        {"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"},
+        {"protocol": "freedom", "settings": {"fragment": {"interval": "3-5", "length": "50-100", "packets": "tlshello"}}, "streamSettings": {"network": "raw", "security": "", "sockopt": {"TcpNoDelay": true, "mark": 255}}, "tag": "fragment"}
+    ],
+    "policy": {
+        "levels": {
+            "0": {"statsUserDownlink": true, "statsUserUplink": true},
+            "8": {"connIdle": 120, "downlinkOnly": 0, "handshake": 2, "uplinkOnly": 0}
+        },
+        "system": {"statsInboundDownlink": true, "statsInboundUplink": true, "statsOutboundDownlink": true, "statsOutboundUplink": true}
+    },
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {"ip": ["8.8.8.8"], "outboundTag": "proxy-finland", "port": 53},
+            {"ip": ["77.88.8.8"], "outboundTag": "direct", "port": 53},
+            {"inboundTag": ["metrics_in"], "outboundTag": "metrics_out"},
+            {"domain": ["geosite:win-spy", "geosite:torrent", "geosite:category-ads"], "outboundTag": "block"},
+            {"domain": ["geosite:twitch-ads", "geosite:youtube", "domain:googlevideo.com", "domain:youtube.com", "domain:ytimg.com"], "outboundTag": "proxy-finland"},
+            {"domain": ["geosite:private", "geosite:category-ru"], "outboundTag": "direct"},
+            {"ip": ["geoip:private", "geoip:direct"], "outboundTag": "direct"}
+        ]
+    }
+}
