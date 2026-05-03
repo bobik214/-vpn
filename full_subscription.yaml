@@ -1,0 +1,109 @@
+proxies:
+  - name: "Финляндия"
+    type: socks5
+    server: 161.0.14.107
+    port: 8000
+    username: dy7MN7
+    password: zuXFgs
+
+  - name: "Германия"
+    type: socks5
+    server: 85.195.81.155
+    port: 12288
+    username: vqc8Xu
+    password: p8T83E
+
+  - name: "Великобритания"
+    type: socks5
+    server: 45.153.20.216
+    port: 10239
+    username: FB1YmK
+    password: KCTUKb
+
+  - name: "Франция"
+    type: socks5
+    server: 217.69.6.173
+    port: 10709
+    username: qQAgQ2
+    password: CcToZP
+
+  - name: "Нидерланды-1"
+    type: socks5
+    server: 45.91.209.149
+    port: 10737
+    username: UnYfuL
+    password: nAuGax
+
+  - name: "Нидерланды-2"
+    type: socks5
+    server: 45.91.209.149
+    port: 10736
+    username: UnYfuL
+    password: nAuGax
+
+  - name: "Нидерланды-3"
+    type: socks5
+    server: 45.91.209.149
+    port: 10735
+    username: UnYfuL
+    password: nAuGax
+
+  - name: "Москва-1"
+    type: socks5
+    server: 217.29.62.212
+    port: 12112
+    username: x4d0W7
+    password: 6BW0at
+
+  - name: "Москва-2"
+    type: socks5
+    server: 217.29.53.108
+    port: 13633
+    username: UsbDcf
+    password: KRH2sF
+
+  - name: "Москва-3"
+    type: socks5
+    server: 217.29.62.212
+    port: 12111
+    username: x4d0W7
+    password: 6BW0at
+
+  - name: "Москва-4"
+    type: socks5
+    server: 217.29.62.212
+    port: 12110
+    username: x4d0W7
+    password: 6BW0at
+
+  - name: "Москва-5"
+    type: socks5
+    server: 217.29.62.212
+    port: 12109
+    username: x4d0W7
+    password: 6BW0at
+
+proxy-groups:
+  - name: "ZombieVPN"
+    type: select
+    proxies:
+      - "Финляндия"
+      - "Германия"
+      - "Великобритания"
+      - "Франция"
+      - "Нидерланды-1"
+      - "Нидерланды-2"
+      - "Нидерланды-3"
+      - "Москва-1"
+      - "Москва-2"
+      - "Москва-3"
+      - "Москва-4"
+      - "Москва-5"
+
+dns:
+  enable: true
+  listen: 0.0.0.0
+  enhanced-mode: fake-ip
+  nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
