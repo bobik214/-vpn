@@ -1,0 +1,98 @@
+[
+    {
+        "remarks": "Финляндия",
+        "server": "161.0.14.107",
+        "port": 8000,
+        "user": "dy7MN7",
+        "pass": "zuXFgs",
+        "type": "socks5"
+    },
+    {
+        "remarks": "Германия",
+        "server": "85.195.81.155",
+        "port": 12288,
+        "user": "vqc8Xu",
+        "pass": "p8T83E",
+        "type": "socks5"
+    },
+    {
+        "remarks": "Великобритания",
+        "server": "45.153.20.216",
+        "port": 10239,
+        "user": "FB1YmK",
+        "pass": "KCTUKb",
+        "type": "socks5"
+    },
+    {
+        "remarks": "Франция",
+        "server": "217.69.6.173",
+        "port": 10709,
+        "user": "qQAgQ2",
+        "pass": "CcToZP",
+        "type": "socks5"
+    },
+    {
+        "remarks": "Нидерланды-1",
+        "server": "45.91.209.149",
+        "port": 10737,
+        "user": "UnYfuL",
+        "pass": "nAuGax",
+        "type": "socks5"
+    },
+    {
+        "remarks": "Нидерланды-2",
+        "server": "45.91.209.149",
+        "port": 10736,
+        "user": "UnYfuL",
+        "pass": "nAuGax",
+        "type": "socks5"
+    },
+    {
+        "remarks": "Нидерланды-3",
+        "server": "45.91.209.149",
+        "port": 10735,
+        "user": "UnYfuL",
+        "pass": "nAuGax",
+        "type": "socks5"
+    },
+    {
+        "remarks": "Москва-1",
+        "server": "217.29.62.212",
+        "port": 12112,
+        "user": "x4d0W7",
+        "pass": "6BW0at",
+        "type": "socks5"
+    },
+    {
+        "remarks": "Москва-2",
+        "server": "217.29.53.108",
+        "port": 13633,
+        "user": "UsbDcf",
+        "pass": "KRH2sF",
+        "type": "socks5"
+    },
+    {
+        "remarks": "Москва-3",
+        "server": "217.29.62.212",
+        "port": 12111,
+        "user": "x4d0W7",
+        "pass": "6BW0at",
+        "type": "socks5"
+    },
+    {
+        "remarks": "Москва-4",
+        "server": "217.29.62.212",
+        "port": 12110,
+        "user": "x4d0W7",
+        "pass": "6BW0at",
+        "type": "socks5"
+    },
+    {
+        "remarks": "Москва-5",
+        "server": "217.29.62.212",
+        "port": 12109,
+        "user": "x4d0W7",
+        "pass": "6BW0at",
+        "type": "socks5"
+    }
+]
